@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div#app {
+  width: 1280px;
+  margin: auto;
+  padding-top: 1.5rem;
+  border: 2px solid rgb(255, 78, 0);
+
+  h2 {
+    margin-left: 0.5rem;
+    span {
+      font-size: 1.5rem;
+      color: white;
+      border-radius: 8px;
+      background-color: rgb(255, 78, 0);
+      padding: 0.25rem;
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+
+    h4 {
+      width: 200px;
+      position: relative;
+      &.count {
+        left: 17rem;
+      }
+
+      &.sum {
+        left: 14rem;
+      }
+
+      &.bye {
+        left: 9rem;
+      }
+    }
+  }
+
+  .cart-list {
+    .cart-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem 0;
+      // margin: 2rem 0;
+      background-color: rgb(255, 240, 212);
+      .img {
+        width: 150px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .count {
+        .row {
+          display: flex;
+          input.counter {
+            width: 50px;
+            text-align: center;
+          }
+
+          .minus,
+          .plus {
+            font-size: 1.75rem;
+            color: rgb(255, 78, 0);
+          }
+        }
+      }
+
+      .price {
+        font-size: 1.5rem;
+      }
+
+      button.delete {
+        font-size: 1.5rem;
+        color: rgb(255, 78, 0);
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .total {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 4.5rem;
+    margin-bottom: 0.5rem;
+    h3 {
+      font-size: 1.5rem;
+      margin-left: auto;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      margin-left: 1.5rem;
+      color: white;
+      background-color: rgb(255, 78, 0);
+    }
+  }
+}

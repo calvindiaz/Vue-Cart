@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div#app {
+  width: 1280px;
+  margin: auto;
+  padding-top: 1.5rem;
+  border: 2px solid rgb(255, 78, 0);
+}
+div#app h2 {
+  margin-left: 0.5rem;
+}
+div#app h2 span {
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 8px;
+  background-color: rgb(255, 78, 0);
+  padding: 0.25rem;
+}
+div#app .title {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+div#app .title h4 {
+  width: 200px;
+  position: relative;
+}
+div#app .title h4.count {
+  left: 17rem;
+}
+div#app .title h4.sum {
+  left: 14rem;
+}
+div#app .title h4.bye {
+  left: 9rem;
+}
+div#app .cart-list .cart-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: rgb(255, 240, 212);
+}
+div#app .cart-list .cart-item .img {
+  width: 150px;
+}
+div#app .cart-list .cart-item .img img {
+  width: 100%;
+}
+div#app .cart-list .cart-item .count .row {
+  display: flex;
+}
+div#app .cart-list .cart-item .count .row input.counter {
+  width: 50px;
+  text-align: center;
+}
+div#app .cart-list .cart-item .count .row .minus,
+div#app .cart-list .cart-item .count .row .plus {
+  font-size: 1.75rem;
+  color: rgb(255, 78, 0);
+}
+div#app .cart-list .cart-item .price {
+  font-size: 1.5rem;
+}
+div#app .cart-list .cart-item button.delete {
+  font-size: 1.5rem;
+  color: rgb(255, 78, 0);
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+div#app .total {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 4.5rem;
+  margin-bottom: 0.5rem;
+}
+div#app .total h3 {
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+div#app .total button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-left: 1.5rem;
+  color: white;
+  background-color: rgb(255, 78, 0);
+}/*# sourceMappingURL=style.css.map */

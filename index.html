@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2><span>Shopping Cart</span></h2>
+
+      <div class="title">
+        <h4>商品</h4>
+        <h4 class="count">數量</h4>
+        <h4 class="sum">金額</h4>
+        <h4 class="bye">移除</h4>
+      </div>
+
+      <div class="cart-list">
+        <div class="cart-item" v-for="(item,index) in cartItem ">
+          <div class="img">
+            <img :src="item.link" />
+          </div>
+
+          <h4>{{item.name}}</h4>
+
+          <div class="count">
+            <div class="row">
+              <button class="minus" @click="reduceItem(index)">
+                <i class="fa-solid fa-square-minus"></i>
+              </button>
+              <input type="tel" v-model="item.count" class="counter" />
+              <button class="plus" @click="addItem(index)">
+                <i class="fa-solid fa-square-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="price">{{item.count*item.price}} NT</div>
+          <button class="delete" @click="removeCart(index)">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="total">
+        <h3>總共: <span>{{totalPrice}}</span> NT</h3>
+        <button type="submit">結帳</button>
+      </div>
+    </div>
+  </body>
+</html>
